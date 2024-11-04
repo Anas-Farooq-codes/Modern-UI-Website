@@ -1,15 +1,30 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+
+// Framer Motion and Animation 
+
+import { motion } from 'framer-motion';
+import { bodyAnimation, imageAnimation } from '../animations/animations';
+
 
 // Icons 
 
 import {AiFillGithub, AiFillLinkedin, AiFillDiscord} from "react-icons/ai";
 
+// Images 
+import Image from 'next/image'
+import profile from "../../public/about-me.webp"
+import { monaSans } from '../fonts/monaSans';
+import AnimatedWords from '../animations/AnimatedWords';
+
+
+
 const Hero = () => {
   return (
-    <section className="relative z-10 flex h-screen w-full items-stretch justify-center bg-[url('.//../public/heros.jpg')] bg-cover bg-center py-0"
-    id='home'>
+    <motion.section className="relative z-10 flex h-screen w-full items-stretch justify-center bg-[url('.//../public/heros.jpg')] bg-cover bg-center py-0"
+    id='home'
+    initial="initial"
+    animate="animate">
 
       {/* Checked Background  */}
 
@@ -27,9 +42,10 @@ const Hero = () => {
 <div>
   <Link
   href="#">
-    <button className='hidden rounded-full border-[#e4ded7] border-2 py-2 px-4 font-semibold text-[#e4ded7] sm:block md:text-[16px] lg:block'>
+    <motion.button className='hidden rounded-full border-[#e4ded7] border-2 py-2 px-4 font-semibold text-[#e4ded7] sm:block md:text-[16px] lg:block'
+    variants={bodyAnimation}>
       Let's Connect
-    </button>
+    </motion.button>
   </Link>
   
 </div>
@@ -40,32 +56,57 @@ const Hero = () => {
   <Link href="https://github.com/Anas-Farooq-codes"
   target='blank'
   aria-label='View Github Profile'>
-    <p>
+    <motion.p
+    variants={bodyAnimation}
+
+    >
     <AiFillGithub size={30}/>
-    </p>
+    </motion.p>
   </Link>
 
   <Link href="https://www.linkedin.com/in/anas-farooq06/"
   target='blank'
   aria-label='View Linkedin Profile'>
-    <p>
+    <motion.p
+        variants={bodyAnimation}
+        >
     <AiFillLinkedin size={30}/>
-    </p>
+    </motion.p>
   </Link>
 
   <Link href="https://discord.gg/FGunPKZUp3"
   target='blank'
   aria-label='Join Our Community'>
-    <p>
+    <motion.p
+        variants={bodyAnimation}
+        >
     <AiFillDiscord size={30}/>
-    </p>
+    </motion.p>
   </Link>
 
 
 </div>
-
       </div>
-    </section>
+
+      <div className='-mt-36 flex flex-col items-center justify-center'>
+        <div
+        className={`relative flex flex-col items-center justify-center ${monaSans.className}`}>
+          <AnimatedWords
+          title='Celestia Vale'
+          style='inline-block overflow-hidden pt-1'
+          />
+          <motion.div className='absolute bottom-[-110px] mx-auto sm:bottom-[-100px] md:bottom-[-130px] lg:bottom-[-190px]'
+          variants={imageAnimation}>
+            <Image
+              src={profile}
+              priority
+              alt='profile'
+              className='w-[150px] grayscale transition-all duration-500 hover:grayscale-0 md:w-[200px] rounded-full lg:w-[245px]'
+            />
+          </motion.div>
+        </div>
+      </div>
+    </motion.section>
   )
 }
 

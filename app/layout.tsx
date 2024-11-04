@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import {Syne} from "next/font/google"
+import { ReactNode } from "react";
 
 
 const syne = Syne({
@@ -15,11 +16,11 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+type RootLayoutProps = {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children,}: RootLayoutProps) {
   return (
     <html lang="en">
       <body

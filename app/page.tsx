@@ -8,6 +8,12 @@ import useBlobity from "blobity/lib/react/useBlobity";
 import { initialBlobityOptions } from "./utils/BlobityConfig";
 import { useEffect } from "react";
 
+// Dyanmic 
+
+import dynamic from "next/dynamic";
+const Work = dynamic(() => import("./work-section/Work"))
+
+
 export default function Home() {
   const blobityInstance = useBlobity(initialBlobityOptions)
 
@@ -29,6 +35,7 @@ window.scrollTo({
     <PreLoader/>
     <main className="flex flex-col items-center justify-center">
       <Hero/>
+      <Work/>
     </main>
     </>
   );

@@ -93,7 +93,7 @@ const Hero = () => {
         className={`relative flex flex-col items-center justify-center ${monaSans.className}`}>
           <AnimatedWords
           title='Celestia Vale'
-          style='inline-block overflow-hidden pt-1'
+          style="display: inline-block; overflow: hidden; padding-top: 0.25rem; margin-right: -1rem; margin-bottom: -0.25rem;"
           />
           <motion.div className='absolute bottom-[-110px] mx-auto sm:bottom-[-100px] md:bottom-[-130px] lg:bottom-[-190px]'
           variants={imageAnimation}>
@@ -101,10 +101,28 @@ const Hero = () => {
               src={profile}
               priority
               alt='profile'
+              data-blobity-tooltip="Celestia Vale"
+              data-blobity-invert="false"
               className='w-[150px] grayscale transition-all duration-500 hover:grayscale-0 md:w-[200px] rounded-full lg:w-[245px]'
             />
           </motion.div>
         </div>
+      </div>
+
+      <div className='absolute bottom-10 flex items-center justify-center md:bottom-10 lg:w-[90%] lg:max-w-[1440px] lg:justify-between'>
+        <motion.div className='max-w-[350px] md:max-w-[400px] lg:max-w-[400px]'
+        variants={bodyAnimation}>
+          <p className='z-50 text-center text-[16px] font-medium text-[#e4ded7] md:text-[20px] lg:text-left'>
+          Visual Creator, UI/UX Specialist, Freelancer, Frontend Developer
+          </p>
+        </motion.div>
+
+        <motion.div className='max-w-[500px] hidden md:block lg:max-w-[420px]'
+        variants={bodyAnimation}>
+          <p className='text-center lg:text-right text-[16px] font-semibold text-[#e4ded7] md:text-[20px]'>
+          With over 3 years in the field and more than 20 satisfied clients
+</p>
+        </motion.div>
       </div>
     </motion.section>
   )

@@ -47,5 +47,21 @@ export const reviewDetails = [
         profileImg: james,
         testimonial: "This UI/UX expert brought our vision to life, creating intuitive, user-centered designs. The user flow is now seamless, thanks to their keen understanding of user behavior and aesthetics.",
         index: 3,
-    }
+    },
+    {
+        name: "Keli Johnson",
+        role: "Marketing Specialist",
+        company: "Brandify Inc.",
+        profileImg: keli,
+        testimonial: "Their marketing strategies have taken our outreach to new heights. The data-driven approach paired with creative ideas has greatly increased our engagement.",
+        index: 4,
+    },
+    {
+        name: "Anto Green",
+        role: "Lead Developer",
+        company: "CodeCrafters",
+        profileImg: anto,
+        testimonial: "An exceptional developer with a knack for solving complex problems. Their commitment to quality and performance is evident in every project.",
+        index: 5,
+    },
 ];

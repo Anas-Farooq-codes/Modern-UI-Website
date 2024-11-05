@@ -15,7 +15,6 @@ export default function AnimatedTitle({
     className,
     wordSpace,
     charSpace,
-    delay = 0, // Setting a default value for delay
 }: AnimatedTitleProps) {
 
     const ctrls = useAnimation();
@@ -41,11 +40,11 @@ export default function AnimatedTitle({
     const characterAnimation = {
         hidden: {
             opacity: 0,
-            y: "0.25em",
+            y: `0.25em`,
         },
         visible: {
             opacity: 1,
-            y: "0em",
+            y: `0em`,
             transition: {
                 duration: 1,
                 ease: [0.2, 0.65, 0.3, 0.9],
@@ -55,24 +54,24 @@ export default function AnimatedTitle({
 
     return (
         <h2 aria-label={text} role="heading" className={className}>
-            {text.split(" ").map((word, wordIndex) => (
+            {text.split(" ").map((word, index) => (
                 <motion.span
                     ref={ref}
                     aria-hidden="true"
-                    key={wordIndex}
+                    key={index}
                     initial="hidden"
                     animate={ctrls}
                     variants={wordAnimation}
                     transition={{
-                        delayChildren: wordIndex * 0.25 + delay, // Adjusted for delay prop
+                        delayChildren: index * 0.25,
                         staggerChildren: 0.05,
                     }}
                     className={`inline-block whitespace-nowrap ${wordSpace}`}
                 >
-                    {word.split("").map((character, charIndex) => (
+                    {word.split("").map((character, index) => (
                         <motion.span
                             aria-hidden="true"
-                            key={`${wordIndex}-${charIndex}`} // Ensuring unique keys
+                            key={index}
                             variants={characterAnimation}
                             className={`inline-block ${charSpace}`}
                         >

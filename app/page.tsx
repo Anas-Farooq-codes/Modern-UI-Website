@@ -11,6 +11,7 @@ import { useEffect } from "react";
 // Dyanmic 
 
 import dynamic from "next/dynamic";
+import ReviewGrid from "@/app/reviews-section/ReviewGrid";
 const Work = dynamic(() => import("./work-section/Work"))
 
 
@@ -36,6 +37,7 @@ window.scrollTo({
     <main className="flex flex-col items-center justify-center">
       <Hero/>
       <Work/>
+      <ReviewGrid/>
     </main>
     </>
   );

@@ -2,6 +2,7 @@
 
 import PreLoader from "./animations/PreLoader/PreLoader";
 import Hero from "./Hero-section/Hero";
+import Reviews from "@/app/reviews-section/ReviewGrid";
 
 // Blobity Cursor 
 import useBlobity from "blobity/lib/react/useBlobity";
@@ -11,8 +12,8 @@ import { useEffect } from "react";
 // Dyanmic 
 
 import dynamic from "next/dynamic";
-import ReviewGrid from "@/app/reviews-section/ReviewGrid";
 const Work = dynamic(() => import("./work-section/Work"))
+const About = dynamic(() => import("./about-section/About"))
 
 
 export default function Home() {
@@ -37,7 +38,8 @@ window.scrollTo({
     <main className="flex flex-col items-center justify-center">
       <Hero/>
       <Work/>
-      <ReviewGrid/>
+      <Reviews/>
+      <About />
     </main>
     </>
   );

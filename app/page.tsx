@@ -14,7 +14,7 @@ import { useEffect } from "react";
 import dynamic from "next/dynamic";
 const Work = dynamic(() => import("./work-section/Work"))
 const About = dynamic(() => import("./about-section/About"))
-
+const Contact = dynamic(() => import("./contact-section/Contact"))
 
 export default function Home() {
   const blobityInstance = useBlobity(initialBlobityOptions)
@@ -40,6 +40,7 @@ window.scrollTo({
       <Work/>
       <Reviews/>
       <About />
+      <Contact/>
     </main>
     </>
   );

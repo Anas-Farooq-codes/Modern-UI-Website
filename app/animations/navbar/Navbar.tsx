@@ -12,7 +12,7 @@ elem?.scrollIntoView({
 });
 };
   return (
-    <nav className="fixed bottom-10 left-0 right-0 z-50 my-0 mx-auto flex w-[368px] items-center justify-center gap-1 rounded-full bg-[#07070a] px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[515px] md:p-2 lg:w-[565px]">
+    <nav className="fixed bottom-5 md:bottom-20 lg:bottom-10 left-0 right-0 z-50 my-0 mx-auto flex w-[368px] items-center justify-center gap-1 rounded-full bg-[#07070a] px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[515px] md:p-2 lg:w-[565px]">
 
 <Link
         href="#home"

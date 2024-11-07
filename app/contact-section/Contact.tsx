@@ -29,7 +29,7 @@ const Contact = () => {
       <div className={`flex flex-col items-start justify-center ${monaSans.className} relative w-full sm:items-center lg:max-w-[1440px]`}>
         <AnimatedWords2
           title={"Let's Connect"}
-          style="flex max-w-[500px] flex-col items-start text-left text-[100px] font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center sm:text-[170px] md:text-[200px] lg:text-center lg:text-[270px] xl:text-[300px]"
+          style="flex max-w-[500px] flex-col items-start text-left text-[100px] font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center sm:text-[120px] md:text-[140px] lg:text-center lg:text-[200px] xl:text-[240px] 2xl:text-[300px]"
         />
       </div>
       
@@ -39,7 +39,7 @@ const Contact = () => {
             text={"Got a question, proposal, project, or want to work together on something?"}
             className={"-mb-1 inline-block overflow-hidden pt-1 sm:-mb-2 md:-mb-3 lg:-mb-4"}
           />
-<div className="mt-5 flex w-[335px] items-center justify-between gap-4 md:w-[400px] md:gap-4">
+<div className="text-[12px] mt-5 flex w-[335px] items-center justify-between gap-4 md:w-[310px] md:gap-4">
   <Link 
     href="https://www.linkedin.com/in/anas-farooq06/"
     aria-label="Connect with me"

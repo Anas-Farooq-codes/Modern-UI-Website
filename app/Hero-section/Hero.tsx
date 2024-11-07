@@ -20,6 +20,17 @@ import AnimatedWords from '../animations/AnimatedWords';
 
 
 const Hero = () => {
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>)=> {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+        behavior: "smooth",
+    });
+    };
+
   return (
     <motion.section className="relative z-10 flex h-screen w-full items-stretch justify-center bg-[url('.//../public/heros.jpg')] bg-cover bg-center py-0"
     id='home'
@@ -41,7 +52,10 @@ const Hero = () => {
 
 <div>
   <Link
-  href="#">
+  href="#contact"
+  onClick={handleScroll}
+  data-blobity-magnetic="false"
+  aria-label='Scroll to Contact Section'>
     <motion.button className='hidden rounded-full border-[#e4ded7] border-2 py-2 px-4 font-semibold text-[#e4ded7] sm:block md:text-[16px] lg:block'
     variants={bodyAnimation}>
       Let's Connect

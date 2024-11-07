@@ -1,10 +1,10 @@
 import { StaticImageData } from "next/image";
-import alice from "../../public/team-1.webp";
+import alice from "../../public/stack-2.png";
 import keli from "../../public/team-2.webp";
-import nena from "../../public/team-4.webp";
-import smith from "../../public/team-1.webp";
-import james from "../../public/team-2.webp";
-import anto from "../../public/team-4.webp";
+import nena from "../../public/stack-4.png";
+import smith from "../../public/stack-5.png";
+import james from "../../public/stack-3.png";
+import anto from "../../public/stack-1.png";
 
 export type reviewProps = {
     name: string;

@@ -11,7 +11,8 @@ import { reviewDetails } from './ReviewDetails'
 
 const Reviews = () => {
   return (
-    <section className='z-10 flex w-full flex-col items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center pt-20 md:pb-16 lg:pb-24'>
+    <section className='z-10 flex w-full flex-col items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center pt-20 md:pb-16 lg:pb-24'
+    id='testimonials'>
       <div className={`relative mb-16 flex w-full flex-col items-center justify-center gap-10 text-[#e4ded7] sm:items-center lg:max-w-[1440px]`}>
         <AnimatedWords2
           title={"Reviews"}
